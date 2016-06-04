@@ -1,0 +1,7 @@
+How long did you spend working on this project?
+I spent one week and 1 day working on this project. 
+What was the most rewarding challenge you conquered?
+I would say the most rewarding challenge was getting a feel of how initialise method works. 
+What two additional features did you build? Why?
+Where do you still have room to grow?
+Plenty. I feel that I need to do many more projects in order to get familiar with coding in Ruby and creation of new methods. Also, there are so many methods existing in Ruby which I have not try yet and I feel like I am only scratching the surface so far. 
