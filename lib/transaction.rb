@@ -14,8 +14,10 @@ class Transaction
 		@@transactions
 	end
 
-	
 
+	def self.find(number)
+		return @@transactions[number - 1]
+	end
 
 	private
 
