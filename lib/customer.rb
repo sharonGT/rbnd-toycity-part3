@@ -20,6 +20,14 @@ def self.find_by_name(name)
 	end
 end
 
+def purchase(toy)
+	if toy.stock > 0
+		transaction = Transaction.new(@name, toy)
+	else 
+		raise OutOfStockError, "#{toy.title} is out of stock."
+	end
+end
+
 
 private
 
