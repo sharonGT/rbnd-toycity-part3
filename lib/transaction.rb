@@ -1,5 +1,5 @@
 class Transaction
-	attr_accessor :product, :customer, :id, :transactions
+	attr_accessor :product, :customer, :id
 
 	@@transactions = []
 
@@ -14,9 +14,13 @@ class Transaction
 		@@transactions
 	end
 
-
 	def self.find(number)
 		return @@transactions[number - 1]
+	end
+
+	def self.refund_first
+		@@transactions.shift
+		return @@transactions
 	end
 
 	private
@@ -30,5 +34,4 @@ class Transaction
 			@id += 1
 		end
 	end
-
 end

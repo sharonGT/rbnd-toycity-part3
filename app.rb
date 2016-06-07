@@ -3,7 +3,6 @@ require_relative "lib/customer"
 require_relative "lib/product"
 require_relative "lib/transaction"
 
-
 # PRODUCTS
 
 Product.new(title: "LEGO Iron Man vs. Ultron", price: 22.99, stock: 55)
@@ -17,6 +16,7 @@ puts Product.all.count # Should return 3
 
 nanoblock = Product.find_by_title("Nano Block Empire State Building")
 firehouse = Product.find_by_title("LEGO Firehouse Headquarter")
+ironmanUltron = Product.find_by_title("LEGO Iron Man vs. Ultron")
 
 puts nanoblock.title # Should return 'Nano Block Empire State Building'
 puts nanoblock.price # Should return 49.99
@@ -40,12 +40,14 @@ puts Customer.all.count # Should return 2
 #Should return DuplicateCustomerError: 'Walter Latimer' already exists.
 
 walter = Customer.find_by_name("Walter Latimer")
+julia = Customer.find_by_name("Julia Van Cleve")
 
 puts walter.name # Should return "Walter Latimer"
 
 # TRANSACTIONS
 
 transaction = Transaction.new(walter, nanoblock)
+transaction = Transaction.new(julia, ironmanUltron)
 
 puts transaction.id # Should return 1
 puts transaction.product == nanoblock # Should return true
@@ -53,6 +55,8 @@ puts transaction.product == firehouse # Should return false
 puts transaction.customer == walter # Should return true
 
 puts nanoblock.stock # Should return 11
+
+puts Transaction.refund_first #puts remaining transaction after first transaction is refunded
 
 # PURCHASES
 
@@ -64,5 +68,9 @@ transaction2 = Transaction.find(2)
 
 puts transaction2.product == nanoblock # Should return true
 
+
+
 #walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+
