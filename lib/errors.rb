@@ -4,5 +4,5 @@ end
 class DuplicateCustomerError < StandardError
 end
 
-class DuplicateCustomerError < StandardError
+class OutOfStockError < StandardError
 end

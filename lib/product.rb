@@ -23,7 +23,7 @@ class Product
 	end
 
 	def in_stock?
-		@stock > 0
+		return @stock > 0
 	end
 
 	def self.in_stock
