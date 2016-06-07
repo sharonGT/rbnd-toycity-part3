@@ -29,6 +29,7 @@ products_in_stock = Product.in_stock
 puts products_in_stock.include?(nanoblock) # Should return true
 puts products_in_stock.include?(firehouse) # Should return false
 
+
 # CUSTOMERS
 
 Customer.new(name: "Walter Latimer")
@@ -44,10 +45,11 @@ julia = Customer.find_by_name("Julia Van Cleve")
 
 puts walter.name # Should return "Walter Latimer"
 
+puts Customer.refund_customer  #puts remaining customers in list after first purchase is refunded
+
 # TRANSACTIONS
 
 transaction = Transaction.new(walter, nanoblock)
-transaction = Transaction.new(julia, ironmanUltron)
 
 puts transaction.id # Should return 1
 puts transaction.product == nanoblock # Should return true
@@ -56,7 +58,6 @@ puts transaction.customer == walter # Should return true
 
 puts nanoblock.stock # Should return 11
 
-puts Transaction.refund_first #puts remaining transaction after first transaction is refunded
 
 # PURCHASES
 

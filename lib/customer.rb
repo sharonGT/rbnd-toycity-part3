@@ -19,12 +19,6 @@ attr_reader :name
 		end
 	end
 
-	def self.listing
-		@@customers.each do |customer|
-			return customer.name
-		end
-	end
-
 	def purchase(toy)
 		if toy.stock > 0
 			transaction = Transaction.new(@name, toy)
@@ -33,6 +27,9 @@ attr_reader :name
 		end
 	end
 
+	def self.refund_customer
+		@@customers.shift
+	end
 
 	private
 
