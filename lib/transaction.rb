@@ -18,9 +18,10 @@ class Transaction
 		return @@transactions[number - 1]
 	end
 
-	def self.refund_first
-		@@transactions.shift
-		return @@transactions
+	def self.list_transaction
+		@@transactions.each.with_index(1) do |transaction, index|
+			puts "#{index}. #{transaction}"
+		end
 	end
 
 	private
