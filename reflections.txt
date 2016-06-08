@@ -1,16 +1,13 @@
 How long did you spend working on this project?
-<<<<<<< HEAD
-I spent one week and 1 day working on this project. 
+I spent about 30 hours working on this project.
+
 What was the most rewarding challenge you conquered?
-I would say the most rewarding challenge was getting a feel of how initialise method works. 
+I think it is hard to pick, since I am proud of many parts of the code. I would say the most rewarding challenge is figuring them all out and able to print the correct result on terminal. 
+
 What two additional features did you build? Why?
+I added two methods. Under customer.rb, I added method self.refund_customer where the  first customer gets deleted of purchase list because he/she has decided to return the toy and refund her money. 
+
+The other method is self.list_transaction under transaction.rb. I added this method because, as the list of transactions grow longer in the future, it is important to be able to refer the list in an easier way.
+
 Where do you still have room to grow?
-Plenty. I feel that I need to do many more projects in order to get familiar with coding in Ruby and creation of new methods. Also, there are so many methods existing in Ruby which I have not try yet and I feel like I am only scratching the surface so far. 
-=======
-I spent one week and 1 day working on this project. Approximately 3 hours per day.
-What was the most rewarding challenge you conquered?
-I would say the most rewarding challenge was getting a hang of how initialise method works and structuring my code after lessons on Class are introducted. 
-What two additional features did you build? Why?
-Where do you still have room to grow?
-Plenty. I feel that I need to do many more projects in order to get familiar with coding in Ruby and creation of new methods. Also, there are so many methods existing in Ruby which I have not try yet and I feel like I am only scratching the surface so far. 
->>>>>>> 275766d1a69000149530c4a99bee4b23ca231e6e
+Plenty. I feel that I need to do many more projects in order to get familiar with coding in Ruby and creation of new methods. Also, there are so many methods existing in Ruby in all combinations and permutations which I have not try yet and I feel like I am only scratching the surface so far. 

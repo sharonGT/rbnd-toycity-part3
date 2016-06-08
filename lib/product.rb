@@ -36,11 +36,6 @@ class Product
 		return stock_list
 	end
 
-	def self.select_stock
-		@@products.select {|product| return product.stock > 1 }
-	end
-
-
 	private
 
 	def add_to_products 
