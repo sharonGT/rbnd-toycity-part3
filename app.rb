@@ -45,7 +45,7 @@ walter = Customer.find_by_name("Walter Latimer")
 
 puts walter.name # Should return "Walter Latimer"
 
-puts Customer.refund_customer  #puts remaining customers in list after first purchase is refunded
+puts Customer.refund_customer(1) #puts remaining customers in list after first purchase is refunded
 
 # TRANSACTIONS
 
@@ -65,7 +65,7 @@ puts walter.purchase(nanoblock)
 
 puts Transaction.all.count # Should return 2
 
-transaction2 = Transaction.find(2)
+transaction2 = Transaction.find(1)
 
 puts transaction2.product == nanoblock # Should return true
 

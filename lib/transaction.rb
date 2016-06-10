@@ -14,14 +14,15 @@ class Transaction
 		@@transactions
 	end
 
-	def self.find(number)
-		return @@transactions[number - 1]
+	def self.find(id)
+		@@transactions.find {|transaction| transaction.id == id}
 	end
 
 	def self.list_transaction
 		@@transactions.each.with_index(1) do |transaction, index|
 			puts "#{index}. #{transaction}"
 		end
+		return nil
 	end
 
 	private
