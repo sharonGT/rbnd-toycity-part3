@@ -12,23 +12,15 @@ attr_reader :name
 	end
 
 	def self.find_by_name(name)
-		@@customers.each do |customer|
-			if customer.name == name
-				return customer
-			end
-		end
+		@@customers.find{|customer| customer.name == name}
 	end
 
 	def purchase(toy)
-		if toy.stock > 0
-			transaction = Transaction.new(@name, toy)
-		else 
-			raise OutOfStockError, "#{toy.title} is out of stock."
-		end
+		transaction = Transaction.new(@name, toy)
 	end
 
-	def self.refund_customer
-		@@customers.shift
+	def self.refund_customer(index)
+		@@customers.delete_at(index)
 	end
 
 	private
